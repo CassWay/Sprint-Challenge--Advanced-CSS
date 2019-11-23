@@ -1,4 +1,25 @@
+// Header content
 
+header {
+  .flex-display(column);
+
+  div:nth-of-type(2) {
+    .components-Margin();
+
+    img {
+      width        : 100%;
+      border-radius: .5rem;
+
+      @media @phone {
+        height: 13rem;
+      }
+    }
+
+    @media @phone {
+      max-width: 100%;
+    }
+  }
+}
 
 
 // Home Content
@@ -9,10 +30,16 @@
 
     h2 {
       padding: 15px;
+      @media @phone {
+        padding: 1.5rem;
+      }
     }
 
     p {
       padding:0 15px;
+      @media @phone {
+        padding: 0rem 1.5rem;
+      }
     }
   
   }
@@ -27,6 +54,23 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+    }
+    @media @phone {
+      .flex-display(column);
+      align-items: center;
+
+      .blast {
+        width: 100%;
+        height: 38rem;
+        margin: 0;
+        padding: 2rem 2.5rem;
+        border-radius: 4rem;
+      }
+
+      .sky,
+      .launch {
+        display: none;
+      }
     }
   }
 
@@ -61,6 +105,10 @@
       }
 
       .btn {
+        .btn-Styles(1.6rem, 0);
+      }
+      @media @phone {
+        width: 100%;
       }
     }
 
@@ -73,6 +121,23 @@
         height: auto;
         border-radius: 10px;
       }
+      @media @phone {
+        width: 100%;
+        margin-left: 0rem;
+        margin-bottom: 2rem;
+
+        & img {
+          border-radius: 1rem;
+        }
+      }
+    }
+    @media @phone {
+      .flex-display(column-reverse);
+      max-width: 100;
+      margin-top: 4rem;
+      margin-bottom: .5rem;
+      padding: 2rem 2rem;
     }
   }
-}// home
+}
+// home
